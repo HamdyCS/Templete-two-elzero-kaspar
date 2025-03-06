@@ -1,0 +1,143 @@
+:root {
+  --main-header-color: white;
+  --primary-color: #19c9fa;
+  --secondary-color: #857777;
+
+  --big-padding: 100px;
+  --medium-padding: 20px;
+
+  --small-margin: 10px;
+  --medium-margin: 20px;
+
+  --font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: var(--font-size);
+}
+
+.container {
+  padding-left: var(--medium-padding);
+  padding-right: var(--medium-padding);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-section {
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+
+  background-size: cover;
+
+  /* header */
+  header {
+    /* container */
+    .container {
+      position: relative;
+      padding-top: var(--medium-padding);
+      padding-bottom: var(--medium-padding);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--main-header-color);
+
+      /* logo */
+      .main-logo img {
+        width: 150px;
+      }
+
+      /* nav */
+      .main-nav {
+        display: flex;
+
+        .links a {
+          margin-right: var(--small-margin);
+          color: inherit;
+          text-decoration: none;
+          margin-left: var(--medium-margin);
+        }
+
+        .links a:hover {
+          color: var(--primary-color);
+        }
+
+        .links a:last-child {
+          margin-right: 30px;
+          position: relative;
+        }
+
+        .links a:last-child::after {
+          content: "";
+          position: absolute;
+          background-color: var(--main-header-color);
+
+          width: 2px;
+          height: 200%;
+
+          top: 50%;
+          right: -20px;
+          transform: translate(50%, -50%);
+        }
+
+        .search-icon {
+          margin-left: var(--small-margin);
+        }
+      }
+    }
+
+    .container::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(--medium-padding);
+      width: calc(100% - var(--medium-padding) * 2 + 10px);
+      height: 1px;
+      background-color: var(--main-header-color);
+      /* transform: translate(-50%, 50%); */
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+  }
+}
