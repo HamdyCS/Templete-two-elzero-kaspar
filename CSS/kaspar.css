@@ -131,6 +131,7 @@ button:hover {
   background-image: url("../images/background.jpg");
 
   background-size: cover;
+  height: 100vh;
 
   /* header */
   header {
@@ -1172,7 +1173,6 @@ button:hover {
   }
 
   .intro-section {
-    height: 100vh;
     header {
       .container {
         .main-nav {
